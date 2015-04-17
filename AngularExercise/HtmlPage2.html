@@ -6,16 +6,43 @@
     <script src="JavaScripts/angular.js"></script>
     <script src="Scripts/underscore.js"></script>
     <script src="JavaScripts/ng-mongo/app.js"></script>
+    <link href="Styles.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container" ng-app="myApp">
         <div ng-controller="myCtrl">
             <h1>Wellcome to the show</h1>
-            <ul>
-                <li ng-repeat="item in items">
-                    {{item.name}}
-                </li>
-            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Last Had</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in items">
+                        <td>{{item.name}}</td>
+                        <td>{{item.price}}</td>
+                        <td>{{item.LastDrank | date: 'fullDate'}}</td>
+                        <td><button class="btn btn-danger" ng-click="removeItem(item)">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>
+                <ng-pluralize count="items.length" when="pluralize"></ng-pluralize>
+            </h3>
+            <p>
+                <label>Beer Name</label>
+                <input type="text" ng-model="name" />
+            </p>
+            <p>
+                <label>Price</label>
+                <input type="text" ng-model="price" />
+            </p>
+            <p>
+                <button class="btn btn-success" ng-click="addBeer()">Add</button>
+            </p>
         </div>
     </div>
 </body>

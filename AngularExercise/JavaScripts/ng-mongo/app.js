@@ -19,4 +19,13 @@ angular.module('myApp', []).controller('myCtrl', function ($scope) {
         1: "Only one beer left",
         other:"{} beers in Fridge"
     }
+
+    $scope.addBeer = function () {
+        var newBeer = { name: $scope.name, price: $scope.price,LastDrank:new Date() };
+        $scope.items.push(newBeer);
+    }
+
+    $scope.removeItem = function (item) {
+        $scope.items.splice($scope.items.indexOf(item), 1);
+    }
 });

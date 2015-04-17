@@ -6,6 +6,7 @@
     <script src="Scripts/underscore.js"></script>
     <script src="JavaScripts/angular.js"></script>
     <script src="JavaScripts/ng-mongo/app.js"></script>
+    <link href="Styles.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container" ng-app="myApp">
@@ -20,6 +21,17 @@
                 </li>
             </ul>
             <h3><ng-pluralize count="items.length" when="pluralize"></ng-pluralize> </h3>
+            <p>
+                <label>Beer Name</label>
+                <input type="text" ng-model="name" />
+            </p>
+            <p>
+                <label>Price</label>
+                <input type="text" ng-model="price" />
+            </p>
+            <p>
+                <button class="btn btn-success" ng-click="addBeer()">Add</button>
+            </p>
         </div>
     </div>
 </body>
