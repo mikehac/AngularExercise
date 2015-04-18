@@ -72,6 +72,7 @@
     <Content Include="JavaScripts\ng-mongo\app.js" />
     <Content Include="JavaScripts\underscore.js" />
     <Content Include="JavaScripts\underscore.min.js" />
+    <Content Include="RealDataTest.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />

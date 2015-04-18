@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="JavaScripts/jquery-2.1.3.js"></script>
+    <script src="JavaScripts/angular.js"></script>
+    <script src="Scripts/underscore.js"></script>
+    <script src="JavaScripts/ng-mongo/RealDataApp.js"></script>
+    <link href="Styles.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container" ng-app="myApp">
+        <div ng-controller="ListCtrl">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>DBs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in items">
+                        <td>
+                            {{item.name}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
