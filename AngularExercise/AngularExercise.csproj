@@ -70,6 +70,7 @@
     <Content Include="JavaScripts\jquery-2.1.3.js" />
     <Content Include="JavaScripts\jquery-2.1.3.min.js" />
     <Content Include="JavaScripts\ng-mongo\app.js" />
+    <Content Include="JavaScripts\ng-mongo\RealDataApp.js" />
     <Content Include="JavaScripts\underscore.js" />
     <Content Include="JavaScripts\underscore.min.js" />
     <Content Include="RealDataTest.html" />
